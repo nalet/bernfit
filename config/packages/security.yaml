@@ -12,6 +12,9 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        register:
+            pattern: ^/register
+            security: false
         main:
             anonymous: ~
             form_login:
@@ -21,12 +24,6 @@ security:
             logout:
                 path:   /logout
                 target: /
-        public:
-            pattern: /
-            security: false
-        register:
-            pattern: /register
-            security: false
             # activate different ways to authenticate
 
             # http_basic: ~
