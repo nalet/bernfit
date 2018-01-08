@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Form\UserPreferenceType;
 use App\Entity\UserPreference;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Exception\AuthenticationCredentialsNotFoundException;
 
 class StartController extends Controller
 {
@@ -40,7 +41,7 @@ class StartController extends Controller
 
 
             return $this->render('start/start.html.twig', array('form' => $form->createView()));
-        } catch (Exception $e) {
+        } catch (AuthenticationCredentialsNotFoundException $e) {
         }
 
         return $this->render('start/start.html.twig');

@@ -12,5 +12,5 @@
 
 ###> symfony/webpack-encore-pack ###
 /node_modules/
-/public/build/
+/public/
 ###< symfony/webpack-encore-pack ###
