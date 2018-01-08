@@ -14,8 +14,8 @@ class UserPreferenceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('tuesday', CheckboxType::class, array('required' => false, 'label' => 'Ich möchte jeweils am Diensttag teilnehmen'))
-            ->add('thursday', CheckboxType::class, array('required' => false, 'label' => 'Ich möchte jeweils am Diensttag teilnehmen'))
+            ->add('tuesday', CheckboxType::class, array('required' => false, 'label' => 'Ich möchte jeweils am Dienstag teilnehmen.'))
+            ->add('thursday', CheckboxType::class, array('required' => false, 'label' => 'Ich möchte jeweils am Donnerstag teilnehmen.'))
             ->add('stayInformed', CheckboxType::class, array('required' => false, 'label' => 'Ich möchte informiert werden über die Trainings und entscheide mich spontan.'))
             ->add('save', SubmitType::class, array('label' => 'Speichern'))
         ;
