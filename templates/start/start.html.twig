@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="jumbotron">
+    <h1 class="display-3">Firmenfitness</h1>
+    <p class="lead">Zämä Bewege</p>
+    {% if not app.user %}
+    <p>
+        <a class="btn btn-lg btn-success" href="{{ path('login') }}" role="button">Anmelden</a>
+    </p>
+    {% endif %}
+    
+</div>
+{% if app.user %}
+{% include 'start/registered.html.twig' %}
+{% endif %}
+{% endblock %}
+{% block javascript %}{% endblock %}

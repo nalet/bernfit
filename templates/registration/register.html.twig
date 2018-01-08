@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{{ form_start(form) }}
+    {{ form_row(form.prename) }}
+    {{ form_row(form.lastname) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+    <button class="btn btn-primary" type="submit">Registrieren</button>
+{{ form_end(form) }}
+
+{% endblock %}
+{% block javascript %}{% endblock %}
